@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.jewelryshop.controllers.order.OrdersWindowControllerCustomer">
+   <children>
+      <BorderPane layoutX="225.0" layoutY="117.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <MenuBar>
+                    <menus>
+                       <Menu fx:id="MenuItemsData" mnemonicParsing="false" text="Навигация">
+                          <items>
+                             <MenuItem mnemonicParsing="false" onAction="#MenuItemBackAction" text="Назад" />
+                          </items>
+                       </Menu>
+                       <Menu fx:id="MenuItemsInstruments" mnemonicParsing="false" text="Инструменты">
+                          <items>
+                             <MenuItem mnemonicParsing="false" onAction="#MenuItemDeleteAction" text="Отменить" />
+                          </items>
+                       </Menu>
+                    </menus>
+                  </MenuBar>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <BorderPane BorderPane.alignment="CENTER">
+               <top>
+                  <FlowPane BorderPane.alignment="CENTER">
+                     <children>
+                        <TextField fx:id="TFSearch" onAction="#TFSearchAction" promptText="Поиск">
+                           <FlowPane.margin>
+                              <Insets />
+                           </FlowPane.margin>
+                        </TextField>
+                        <ComboBox fx:id="CBSort" onAction="#CBSortAction" prefWidth="170.0" promptText="Сортировка" />
+                     </children>
+                  </FlowPane>
+               </top>
+               <center>
+                  <TableView fx:id="TWOrders" minWidth="750.0" BorderPane.alignment="CENTER">
+                     <columns>
+                        <TableColumn id="photoTC" fx:id="photoTC" prefWidth="73.0" text="Фото" />
+                        <TableColumn id="DataTC" fx:id="DataTC" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="97.06664276123047" text="Дата заказа" />
+                        <TableColumn id="ProductTC" fx:id="ProductTC" prefWidth="168.79996490478516" text="Товар" />
+                        <TableColumn id="QuantityTC" fx:id="QuantityTC" text="Количество" />
+                        <TableColumn id="RingSizeTC" fx:id="RingSizeTC" prefWidth="110.40008544921875" text="Размер кольца" />
+                        <TableColumn id="CostTC" fx:id="CostTC" prefWidth="88.0" text="Стоимость" />
+                        <TableColumn id="DeliveryMethodTC" fx:id="DeliveryMethodTC" prefWidth="117.59994506835938" text="Доставка" />
+                        <TableColumn id="AddressTC" fx:id="AddressTC" prefWidth="223.20013427734375" text="Адрес доставки" />
+                        <TableColumn id="StatusTC" fx:id="StatusTC" prefWidth="105.5999755859375" text="Статус" />
+                     </columns>
+                  </TableView>
+               </center>
+               <bottom>
+                  <Label fx:id="labelCurrentCount" text="Кол-во записей" BorderPane.alignment="BOTTOM_LEFT" />
+               </bottom>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.demo.tradeapp.controller.order.OrderViewController">
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <BorderPane fx:id="BorderPaneMainFrame" BorderPane.alignment="CENTER">
+                    <top>
+                        <VBox BorderPane.alignment="CENTER">
+                            <children>
+                                <HBox spacing="10" alignment="CENTER_LEFT">
+                                    <Label text="Клиент:" minWidth="120"/>
+                                    <ComboBox fx:id="ComboBoxCustomer" prefWidth="250" promptText="Выберите клиента"/>
+                                </HBox>
+
+                                <HBox spacing="10" alignment="CENTER_LEFT">
+                                    <Label text="Дата создания:" minWidth="120"/>
+                                    <DatePicker fx:id="DatePickerOrderCreateDate" prefWidth="250" promptText="Дата создания заказа"/>
+                                </HBox>
+
+                                <HBox spacing="10" alignment="CENTER_LEFT">
+                                    <Label text="Метод доставки:" minWidth="120"/>
+                                    <ComboBox fx:id="ComboBoxDeliveryMethod" prefWidth="250" promptText="Выберите метод доставки"/>
+                                </HBox>
+
+                                <HBox spacing="10" alignment="CENTER_LEFT">
+                                    <Label text="Адрес доставки:" minWidth="120"/>
+                                    <TextField fx:id="TextFieldDeliveryAddress" prefWidth="250" promptText="Введите адрес доставки"/>
+                                </HBox>
+
+                                <HBox spacing="10" alignment="CENTER_LEFT">
+                                    <Label text="Статус:" minWidth="120"/>
+                                    <ComboBox fx:id="ComboStatus" prefWidth="250" promptText="Выберите статус заказа"/>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </top>
+                    <center>
+                        <ListView fx:id="ListViewProducts" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="201.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+                    </center>
+                    <bottom>
+                        <FlowPane BorderPane.alignment="CENTER">
+                            <children>
+                                <Label fx:id="LabelBasketInfo" prefHeight="17.0" prefWidth="579.0" text="Label" />
+                                <Button fx:id="BtnDelete" mnemonicParsing="false" onAction="#BtnDeleteAction" text="Удалить" />
+                                <Button fx:id="BtnOk" mnemonicParsing="false" onAction="#BtnOkAction" text="Оформить" />
+                                <Button fx:id="BtnPrintToPDF" mnemonicParsing="false" onAction="#BtnPrintToPDFAction" text="Распечатать" />
+                            </children>
+                        </FlowPane>
+                    </bottom>
+                </BorderPane>
+            </center>
+            <top>
+                <HBox BorderPane.alignment="CENTER">
+                    <children>
+                        <Label fx:id="LabelOrderNumber" prefHeight="17.0" prefWidth="366.0" text="Label" />
+                        <Label fx:id="LabelUser" alignment="CENTER_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="user-label" text="Label" HBox.hgrow="ALWAYS">
+                            <padding>
+                                <Insets right="20.0" />
+                            </padding></Label>
+                    </children>
+                </HBox>
+            </top>
+        </BorderPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane minHeight="400.0" minWidth="800.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.jewelryshop.controllers.gemstone.GemstonesWindowController">
+   <children>
+      <BorderPane layoutX="225.0" layoutY="117.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <MenuBar>
+                    <menus>
+                       <Menu fx:id="MenuItemsData" mnemonicParsing="false" text="Навигация">
+                          <items>
+                             <MenuItem mnemonicParsing="false" onAction="#MenuItemBackAction" text="Назад" />
+                          </items>
+                       </Menu>
+                       <Menu fx:id="MenuItemsInstruments" mnemonicParsing="false" text="Инструменты">
+                          <items>
+                             <MenuItem mnemonicParsing="false" onAction="#MenuItemCreateGemstoneAction" text="Добавить" />
+                          </items>
+                          <items>
+                             <MenuItem mnemonicParsing="false" onAction="#MenuItemDeleteAction" text="Отменить/Удалить" />
+                          </items>
+                          <items>
+                             <MenuItem mnemonicParsing="false" onAction="#MenuItemUpdateAction" text="Редактировать" />
+                          </items>
+                       </Menu>
+                    </menus>
+                  </MenuBar>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <BorderPane BorderPane.alignment="CENTER">
+               <top>
+                  <FlowPane BorderPane.alignment="CENTER">
+                     <children>
+                        <TextField fx:id="TFSearch" onAction="#TFSearchAction" prefHeight="26.0" prefWidth="331.0" promptText="Поиск">
+                           <FlowPane.margin>
+                              <Insets />
+                           </FlowPane.margin>
+                        </TextField>
+                     </children>
+                  </FlowPane>
+               </top>
+               <center>
+                  <TableView fx:id="TWGemstone" minWidth="750.0" BorderPane.alignment="CENTER">
+                     <columns>
+                        <TableColumn id="GemstoneIdTC" fx:id="GemstoneIdTC" prefWidth="47.20001220703125" text="Id" />
+                        <TableColumn id="TitleTC" fx:id="TitleTC" prefWidth="145.5999755859375" text="Название" />
+                        <TableColumn id="TypeOfStoneTC" fx:id="TypeOfStoneTC" prefWidth="181.60003662109375" text="Тип камня" />
+                        <TableColumn id="ColorTC" fx:id="ColorTC" prefWidth="122.39996337890625" text="Цвет" />
+                        <TableColumn id="ShapeOfTheCutTC" fx:id="ShapeOfTheCutTC" prefWidth="128.79998779296875" text="Форма огранки" />
+                        <TableColumn id="SizeTC" fx:id="SizeTC" prefWidth="171.199951171875" text="Размер" />
+                        <TableColumn id="SizeTC" fx:id="QuantityTC" minWidth="-1.0" prefWidth="100.0" text="В наличие" />
+                     </columns>
+                  </TableView>
+               </center>
+               <bottom>
+                  <Label fx:id="labelCurrentCount" text="Кол-во записей" BorderPane.alignment="BOTTOM_LEFT" />
+               </bottom>
+            </BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

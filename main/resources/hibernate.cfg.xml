@@ -1,0 +1,31 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Set URL -->
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/postgres</property>
+        <!-- Set User Name -->
+        <property name="hibernate.connection.username">postgres</property>
+        <!-- Set Password -->
+        <property name="hibernate.connection.password">post123</property>
+        <!-- Set Driver Name -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.show_sql">true</property>
+        <!-- Optional: Auto-generate schema -->
+        <!-- <property name = "hibernate.hbm2ddl.auto">create</property> -->
+        <mapping class="org.example.jewelryshop.models.customers"/>
+        <mapping class="org.example.jewelryshop.models.deliveryMethods"/>
+        <mapping class="org.example.jewelryshop.models.gemstones"/>
+        <mapping class="org.example.jewelryshop.models.metals"/>
+        <mapping class="org.example.jewelryshop.models.orders"/>
+        <mapping class="org.example.jewelryshop.models.products"/>
+        <mapping class="org.example.jewelryshop.models.ringSizes"/>
+        <mapping class="org.example.jewelryshop.models.workers"/>
+        <mapping class="org.example.jewelryshop.models.statuses"/>
+
+    </session-factory>
+</hibernate-configuration>
+

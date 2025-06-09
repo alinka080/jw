@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="663.0" prefWidth="506.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.jewelryshop.controllers.product.CreateProductWindowController">
+<children>
+   <GridPane layoutX="254.0" prefHeight="603.0" prefWidth="424.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="26.0" AnchorPane.topAnchor="0.0">
+       <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="244.20001220703125" minWidth="10.0" prefWidth="172.20001220703125" />
+           <ColumnConstraints hgrow="SOMETIMES" maxWidth="325.79998779296875" minWidth="10.0" prefWidth="325.79998779296875" />
+       </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="75.59998168945313" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="75.59998168945313" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="100.79998779296876" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="75.59998168945313" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="75.59998168945313" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+           <RowConstraints maxHeight="75.59998168945313" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+           <RowConstraints maxHeight="114.80002059936524" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+           <RowConstraints maxHeight="157.40000000000003" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="121.60001220703123" minHeight="10.0" prefHeight="107.99997558593748" vgrow="SOMETIMES" />
+           <RowConstraints maxHeight="69.60001220703123" minHeight="10.0" prefHeight="40.80002441406248" vgrow="SOMETIMES" />
+       </rowConstraints>
+                <children>
+            <Button fx:id="BtnOk" mnemonicParsing="false" onAction="#BtnOkAction" prefHeight="30.0" prefWidth="100.0" text="OK" GridPane.halignment="RIGHT" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin></Button>
+            <Button fx:id="BtnOk" mnemonicParsing="false" onAction="#BtnCancelAction" prefHeight="30.0" prefWidth="100.0" text="Отмена" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin></Button>
+
+            <ComboBox fx:id="ComboBoxWorker" maxWidth="270.0" prefHeight="25.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Мастер:" textAlignment="CENTER" GridPane.rowIndex="5">
+               <padding>
+                  <Insets left="50.0" />
+               </padding></Label>
+
+            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="100.0" prefWidth="207.0" text="Количество: " textAlignment="CENTER" GridPane.rowIndex="6">
+               <padding>
+                  <Insets left="50.0" />
+               </padding></Label>
+            <TextField fx:id="TextFieldQuantity" maxWidth="100.0" prefHeight="25.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+            <ComboBox fx:id="ComboBoxMetal" maxWidth="270.0" prefHeight="25.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Цена" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="7">
+               <padding>
+                  <Insets left="50.0" />
+               </padding></Label>
+
+            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Фото: " textAlignment="CENTER" GridPane.rowIndex="8">
+               <padding>
+                  <Insets left="50.0" />
+               </padding></Label>
+            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Тип изделия:" textAlignment="CENTER" GridPane.rowIndex="1">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Label>
+            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Название:" textAlignment="CENTER">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Label>
+            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Описание:" textAlignment="CENTER" GridPane.rowIndex="2">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Label>
+            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Металл:" textAlignment="CENTER" GridPane.rowIndex="3">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Label>
+            <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Камень:" textAlignment="CENTER" GridPane.rowIndex="4">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Label>
+            <ComboBox fx:id="ComboBoxGemstone" maxWidth="270.0" prefHeight="25.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="TextFieldDescription" maxWidth="270.0" prefHeight="25.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="TextFieldTypeProduct" maxWidth="270.0" prefHeight="25.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+            <TextField fx:id="TextFieldCost" maxWidth="100.0" prefHeight="25.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField fx:id="TextFieldTitle" maxWidth="270.0" prefHeight="25.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.halignment="LEFT" />
+            <ImageView fx:id="ImageViewProduct" fitHeight="120.0" fitWidth="182.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Button fx:id="BtnLoadImage" mnemonicParsing="false" onAction="#BtnLoadImageAction" prefHeight="30.0" prefWidth="100.0" text="Добавить" GridPane.columnIndex="1" GridPane.rowIndex="8">
+               <GridPane.margin>
+                  <Insets left="200.0" top="100.0" />
+               </GridPane.margin>
+            </Button>
+                </children>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+        </GridPane>
+    </children>
+</AnchorPane>

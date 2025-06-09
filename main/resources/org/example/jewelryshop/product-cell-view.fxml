@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="-Infinity" minWidth="750.0" xmlns="http://javafx.com/javafx/20.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.jewelryshop.controllers.product.ListProductCellController">
+   <children>
+      <GridPane layoutX="172.0" layoutY="167.0" prefHeight="188.0" prefWidth="678.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="266.0" minWidth="10.0" prefWidth="166.99997253417968" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="478.9332931518555" minWidth="10.0" prefWidth="268.6000274658203" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="511.0" minWidth="10.0" prefWidth="290.9333740234375" />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="91.73335266113281" minHeight="10.0" prefHeight="91.73335266113281" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="48.79997558593752" minHeight="10.0" prefHeight="26.06664733886717" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="36.00002136230469" minHeight="10.0" prefHeight="32.800024414062506" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ImageView fx:id="ImageViewProduct" fitHeight="151.0" fitWidth="152.0" pickOnBounds="true" preserveRatio="true" GridPane.rowSpan="4">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </ImageView>
+            <Label fx:id="LableFullName" prefHeight="27.0" prefWidth="386.0" text="Название" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Label fx:id="LableDescription" prefHeight="88.0" prefWidth="557.0" text="Описание" textAlignment="JUSTIFY" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font size="10.0" />
+               </font></Label>
+            <Label fx:id="LableWorker" text="Мастер" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="45.0" />
+               </GridPane.margin></Label>
+            <Label fx:id="LableGemstone" text="Камень" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="13.0" />
+               </GridPane.margin></Label>
+            <Label fx:id="LablePrice" text="Стоимость" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+            <Label fx:id="LableQuantity" text="В наличии" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets right="45.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
